@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --pale-blue-light: hsl(225, 100%, 94%, 0.5);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@layer components {
+  .content {
+    @apply h-screen flex justify-center items-center bg-no-repeat bg-pale-blue
+  }
+  
+  .card {
+    @apply bg-very-pale-blue h-112 w-72 rounded-xl text-center
+  }
+  
+  .cardDetails {
+    @apply relative flex flex-col items-center mt-4 mx-6 text-dark-blue
+  }
+  
+  .cardDescription {
+    @apply font-medium text-xs text-desaturated-blue mt-2 mb-4 leading-5
+  }
+  
+  .btns {
+    @apply mt-4 text-xs font-extrabold
+  }
+  
+  .btnProceed {
+    @apply bg-bright-blue text-white w-full py-3 px-4 rounded-lg my-2 hover:bg-light-purple ease-in-out
+  }
+  
+  .btnCancel {
+    @apply text-desaturated-blue my-2 hover:text-dark-blue ease-in-out duration-300
+  }
+  
+  .btnBack {
+    @apply bg-bright-blue text-white py-1 my-2 rounded-lg hover:bg-light-purple ease-in-out
+  }
+  
+  .allPlans {
+    @apply flex flex-col justify-between h-full w-full absolute bg-very-pale-blue
+  }
+  
+  .plan {
+    @apply flex justify-between text-xs w-full bg-desaturated-blue-light p-3 rounded-lg
+  }
+  
+  .planContent {
+    @apply flex items-center
+  }
+  
+  .planOption {
+    @apply ml-4 font-bold
+  }
+  
+  .btnPlan {
+    @apply font-extrabold underline underline-offset-2 text-dark-purple hover:text-light-purple hover:no-underline ease-in-out	duration-200
+  }
+}
